@@ -7,23 +7,30 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="simpleSwitch();">Simple Switch Sample</button>
-    <script>
-        function simpleSwitch() {
-            let productId = 1;
+    <button onclick="blockSwitchStatements();">Block Switch Statements</button>
 
-            switch(productId) {
-                case 1:
-                    console.log("Case 1 for Product 2");
+    <script>
+        function blockSwitchStatements() {
+            let productId = 3;
+            let message = "Default message";
+
+            switch (productId) {
+                case 1: {
+                    let message = "Case 1 message";
+                    console.log(message);
                     break;
-                case 2:
-                    console.log("Case 2 for Product 2");
+                    }
+                case 2: {
+                    let message = "Case 2 message";
+                    console.log(message);
                     break;
+                    }
                 default:
-                    console.log("Default case for unkown");
+                    console.log(message);
                     break;
+
+                }  
             }
-        }
     </script>
 </body>
 </html>
