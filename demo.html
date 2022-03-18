@@ -7,19 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="loopStringSample();">Loop String Sample</button>
+    <button onclick="breakSample();">Break</button>
 
     <script>
         'use strict';
 
-        function loopStringSample() {
-            let productName = "HL Road Frame";
-            let letters = "";
-
-            for (const char of productName) {
-                letters += char;
+        let _products = [
+            {
+                "productID": 680,
+                "name": "HL RF",
+                "price": 21.00
+            },
+            {
+                "productID": 700,
+                "name": "RF LD",
+                "price": 19.00
             }
-            console.log(letters);
+        ];
+
+        function breakSample() {
+            for(const item of _products) {
+                if(item.price == 21.00) {
+                    break;
+                }
+            
+            console.log(JSON.stringify(item));
+            }
         }
     </script>
 </body>
