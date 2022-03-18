@@ -7,28 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="forofSample();">For of sample</button>
+    <button onclick="loopStringSample();">Loop String Sample</button>
 
     <script>
         'use strict';
 
-        let _products = [
-            {
-                "productID": 680,
-                "name": "HL Road Frame",
-                "color": "Black"
-            },
-            {
-                "productID": 700,
-                "name": "XL Road Frame",
-                "color": "Red"
-            }
-        ];
+        function loopStringSample() {
+            let productName = "HL Road Frame";
+            let letters = "";
 
-        function forofSample() {
-            for (const item of _products) {
-                console.log(JSON.stringify(item));
+            for (const char of productName) {
+                letters += char;
             }
+            console.log(letters);
         }
     </script>
 </body>
