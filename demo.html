@@ -7,23 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="forinSample();">For In Sample</button>
+    <button onclick="forofSample();">For of sample</button>
 
     <script>
-        function forinSample() {
-            let product = {
-                "productId": 680,
-                "name": "HL Road Frame",
-                "color": "Black",
-                "listPrice": 1059,
-                "standardCost": 1400,
-                calculateGrossProfit: function() {
-                    return this.listPrice - this.standardCost;
-                }
-            };
+        'use strict';
 
-            for (const key in product) {
-                console.log("'" + key + "'=" + product[key]);
+        let _products = [
+            {
+                "productID": 680,
+                "name": "HL Road Frame",
+                "color": "Black"
+            },
+            {
+                "productID": 700,
+                "name": "XL Road Frame",
+                "color": "Red"
+            }
+        ];
+
+        function forofSample() {
+            for (const item of _products) {
+                console.log(JSON.stringify(item));
             }
         }
     </script>
