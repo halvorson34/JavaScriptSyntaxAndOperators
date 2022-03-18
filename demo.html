@@ -7,30 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="blockSwitchStatements();">Block Switch Statements</button>
+    <button onclick="forinSample();">For In Sample</button>
 
     <script>
-        function blockSwitchStatements() {
-            let productId = 3;
-            let message = "Default message";
+        function forinSample() {
+            let product = {
+                "productId": 680,
+                "name": "HL Road Frame",
+                "color": "Black",
+                "listPrice": 1059,
+                "standardCost": 1400,
+                calculateGrossProfit: function() {
+                    return this.listPrice - this.standardCost;
+                }
+            };
 
-            switch (productId) {
-                case 1: {
-                    let message = "Case 1 message";
-                    console.log(message);
-                    break;
-                    }
-                case 2: {
-                    let message = "Case 2 message";
-                    console.log(message);
-                    break;
-                    }
-                default:
-                    console.log(message);
-                    break;
-
-                }  
+            for (const key in product) {
+                console.log("'" + key + "'=" + product[key]);
             }
+        }
     </script>
 </body>
 </html>
