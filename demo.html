@@ -7,25 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="logicalSample();">Logical</button>
     <script>
-        function trueFalseSample() {
+        function logicalSample() {
             let price = 200;
-            let color = "Red";
-            let result;
+            console.log("price is " + price);
 
-            console.log("Check for 'true' values");
-            // Evaluate the expression
-            result = price > 10;
-            console.log(result);
-
-            // Test the expression
-            if(price > 10) {
-                console.log("Price is > 10");
+            // AND (&&) Operator
+            if (price > 10 && price < 1600) {
+                console.log("price > 10 && price < 1600 is 'true'");
             }
 
+            // AND (&&) Operator
+            if (price > 10 && price < 200) {
+                console.log("price > 10 && price < 200 is 'true'");
+            }
+            else {
+                console.log("price > 10 && price < 200 is 'false'");
+            }
         }
-
-        trueFalseSample();
     </script>
 </body>
 </html>
