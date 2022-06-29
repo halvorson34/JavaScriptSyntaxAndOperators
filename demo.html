@@ -7,23 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="logicalSample();">Logical</button>
+
+    <button onclick="simpleTryCatch()">Try/Catch</button>
+
     <script>
-        function logicalSample() {
-            let price = 200;
-            console.log("price is " + price);
+        function simpleTryCatch() {
+            let result;
 
-            // AND (&&) Operator
-            if (price > 10 && price < 1600) {
-                console.log("price > 10 && price < 1600 is 'true'");
-            }
-
-            // AND (&&) Operator
-            if (price > 10 && price < 200) {
-                console.log("price > 10 && price < 200 is 'true'");
-            }
-            else {
-                console.log("price > 10 && price < 200 is 'false'");
+            try {
+                result = x / 10;
+            } catch (error) {
+                console.log(error.message);
             }
         }
     </script>
